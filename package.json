@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "chart.js": "^4.2.1",
+    "console-table-printer": "^2.11.1"
+  }
+}

@@ -1,0 +1,82 @@
+<div>
+    <canvas id="myChart"></canvas>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx = document.getElementById("myChart");
+    new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: [...Array(13).keys()],
+            datasets: [
+                {
+                    label: "FIFO",
+                    data: [
+                        { x: 0, y: 50 },
+                        { x: 1, y: 48 },
+                        { x: 2, y: 44 },
+                        { x: 3, y: 39 },
+                        { x: 4, y: 38 },
+                        { x: 5, y: 35 },
+                        { x: 6, y: 34 },
+                        { x: 7, y: 31 },
+                        { x: 8, y: 28 },
+                        { x: 9, y: 22 },
+                        { x: 10, y: 22 },
+                        { x: 11, y: 20 },
+                        { x: 12, y: 20 },
+                    ],
+                },
+                {
+                    label: "Optimal",
+                    data: [
+                        { x: 0, y: 50 },
+                        { x: 1, y: 48 },
+                        { x: 2, y: 36 },
+                        { x: 3, y: 31 },
+                        { x: 4, y: 28 },
+                        { x: 5, y: 26 },
+                        { x: 6, y: 24 },
+                        { x: 7, y: 22 },
+                        { x: 8, y: 20 },
+                        { x: 9, y: 19 },
+                        { x: 10, y: 18 },
+                        { x: 11, y: 17 },
+                        { x: 12, y: 16 },
+                    ],
+                },
+                {
+                    label: "LRU",
+                    data: [
+                        { x: 0, y: 50 },
+                        { x: 1, y: 48 },
+                        { x: 2, y: 45 },
+                        { x: 3, y: 39 },
+                        { x: 4, y: 38 },
+                        { x: 5, y: 37 },
+                        { x: 6, y: 34 },
+                        { x: 7, y: 31 },
+                        { x: 8, y: 28 },
+                        { x: 9, y: 26 },
+                        { x: 10, y: 21 },
+                        { x: 11, y: 21 },
+                        { x: 12, y: 21 },
+                    ],
+                },
+            ],
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                },
+            },
+            parsing: {
+                xAxisKey: "x",
+                yAxisKey: "y",
+            },
+        },
+    });
+</script>
